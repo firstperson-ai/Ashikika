@@ -3,7 +3,7 @@ import { useSupabase } from '../../utils/supabase';
 import ResumeEditor from '../../components/resume/ResumeEditor';
 import ATSScoreMeter from '../../components/resume/ATSScoreMeter';
 import PaymentModal from '../../components/payment/PaymentModal';
-import MotionButton from '../../components/common/MotionButton';
+import MotionButton from '../../components/common/LoadingSpinner';
 import DashboardLayout from '../../components/dashboard/DashboardLayout';
 import { motion } from 'framer-motion';
 import LoadingSpinner from '../../components/common/LoadingSpinner';
