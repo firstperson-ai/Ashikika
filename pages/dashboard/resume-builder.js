@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { useSupabase } from '../../utils/supabase';
 import ResumeEditor from '../../components/resume/ResumeEditor';
