@@ -1,3 +1,4 @@
+'use client';
 import { ThemeProvider } from 'next-themes';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ErrorBoundary } from 'react-error-boundary';
