@@ -1,3 +1,4 @@
+'use client';
 import { motion } from 'framer-motion';
 import Lottie from 'react-lottie';
 import aiResumeData from '/public/lottie/ai-resume.json';
