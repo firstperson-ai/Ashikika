@@ -1,3 +1,4 @@
+'use client';
 import { useEffect, useState } from 'react';
 import { useSupabase } from '../utils/supabase';
 import MotionButton from '../components/common/MotionButton';
