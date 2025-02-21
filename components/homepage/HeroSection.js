@@ -1,15 +1,17 @@
 'use client';
+
+import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import Lottie from 'react-lottie';
-import aiResumeData from '/public/lottie/ai-resume.json';
 import MotionButton from '../common/MotionButton';
 import { useInView } from 'framer-motion';
+
+const DynamicLottie = dynamic(() => import('react-lottie').then(mod => mod.default), { ssr: false });
 
 function HeroSection() {
   const lottieOptions = {
     loop: true,
     autoplay: true,
-    animationData: aiResumeData,
+    animationData: require('/public/lottie/ai-resume.json'),
   };
 
   const ref = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -65,7 +67,7 @@ function HeroSection() {
         transition={{ duration: 1.5, delay: 0.5 }}
         className="absolute bottom-0 right-0 w-full md:w-1/2 h-1/2 md:h-1/2 z-0"
       >
-        <Lottie options={lottieOptions} height={300} width={300} isClickToPauseDisabled aria-label="AI Resume Animation" />
+        <DynamicLottie options={lottieOptions} height={300} width={300} isClickToPauseDisabled aria-label="AI Resume Animation" />
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-50 z-0" />
     </div>
